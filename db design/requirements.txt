@@ -1,0 +1,46 @@
+Hi Srinivas,
+
+Here’s the overview.  Let me know when you can meet to get started.  The db design should be completed before any other work is done.
+
+This is *almost* like writing a bunch of nested loops to get the data we want.  Almost.  Also, our schema is in the process of changing right now.  I’ll need to get you the new version.
+
+foreach ($proptypes as $proptype) {
+	foreach ($geos as $geo) {
+		foreach ($stats as $stat) {
+			…
+		}
+	}
+}
+
+There is a little more complexity/conditionals which need to be introduced.  
+
+geographic areas
+	state, county, city, zip, school district
+
+property types
+	residential, land (priority is residential)
+
+stats
+	low, avg, median, high, total
+
+reports/visualizations
+	price per square foot
+	# new listings per day
+	# under contract listings
+	avg beds, baths, garage, lot size, 
+	total listings
+	price per square foot, price per finished square feet, 
+	total square feet
+	days on market 
+	price history of individual listing (we have this data, just need to visualize it)
+
+period
+	day, week, month, year
+
+**how do we dynamically choose the ranges used when graphing?**
+
+what happens when new city is added?
+what happens when new zip code is added?
+what happens when no data is available on a given day/week/month/year?
+what happens when we add a new market?
+at what point do we have enough data to begin displaying stats?  (some can be sooner than others)
