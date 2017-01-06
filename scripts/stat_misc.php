@@ -6,7 +6,7 @@
  * Time: 1:57 AM
  *
  * This scripts computes the avg_bed,avg_bath, avg_garage, avg_lotsize metrics
-   Need to update the avg_garage
+ * Need to update the avg_garage
  */
  
   //Database connection
